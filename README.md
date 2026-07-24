@@ -58,7 +58,7 @@ Expected shape of the `/led` node:
 
 ### 2. Build & flash
 
-Requires [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/) .
+Requires [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/)
 
 ```bash
 idf.py set-target esp32s3
@@ -77,9 +77,3 @@ idf.py build flash monitor
 ```
 
 Your WiFi password and DB URL end up in `sdkconfig`, which is gitignored, so they never get committed.
-
-## How it works
-
-Two FreeRTOS tasks:
-- **Firebase task** — polls `/led.json` every 5 seconds and updates a shared `led_data_t` struct.
-- **LED task** — runs at ~60Hz, reads that struct, and pushes the color/brightness to the WS2812 strip.
