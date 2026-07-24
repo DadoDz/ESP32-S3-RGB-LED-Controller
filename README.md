@@ -58,7 +58,7 @@ Expected shape of the `/led` node:
 
 ### 2. Build & flash
 
-Requires [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/) (v5.x recommended).
+Requires [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/) .
 
 ```bash
 idf.py set-target esp32s3
